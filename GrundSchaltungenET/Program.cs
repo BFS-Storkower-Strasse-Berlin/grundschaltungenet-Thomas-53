@@ -41,20 +41,28 @@ namespace GrundSchaltungenET
             Console.WriteLine("\nWiderstände in der Reiehnschaltung:");
             for (int i = 0; i < list.Count; i++)
             {
-                Console.WriteLine(i + " " + list[i] + " Ohm");
+                Console.WriteLine((i + 1) + " " + list[i] + " Ohm");
             }
 
 
             Console.WriteLine("\nWiderstände in der Parallelschaltung:");
             for (int i = 0; i < list.Count; i++)
             {
-                Console.WriteLine(i + " " + list[i] + " Ohm");
+                Console.WriteLine((i+1) + " " + list[i] + " Ohm");
             }
 
 
-            string Reihe = ("\nErgebnisse für die Reihenschaltung:");
-            Console.WriteLine(Reihe);
 
+
+
+
+
+            string reihe = ("\nErgebnisse für die Reihenschaltung:");
+            Console.WriteLine(reihe);
+
+
+            Console.WriteLine("uGes = " + eingabeV + " V");
+            
 
             double rGesReihe = 0;
             for (int i = 0; i < list.Count; i++)
@@ -65,14 +73,44 @@ namespace GrundSchaltungenET
 
 
 
-
             float spannung = float.Parse(eingabeV);
             double iGesReihe = spannung / rGesReihe;
             Console.WriteLine("iGesReihe : " + iGesReihe + " A ");
 
+            Console.WriteLine("iN = " + iGesReihe + " A");
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            string parallel = ("\nErgebnisse für die Reihenschaltung:");
+            Console.WriteLine(parallel);
+
+
+            Console.WriteLine("uGes = " + eingabeV + " V");
+            Console.WriteLine("uN = " + eingabeV + " V");
+
+
+            double rGesParallel = 0;
+            for (int i = 0; i < list.Count; i++)
+            {
+                rGesParallel = rGesParallel + list[i];
+            }
+            Console.WriteLine("rGesParallel : " + rGesParallel + " Ohm");
 
 
 
@@ -118,8 +156,8 @@ namespace GrundSchaltungenET
             //Console.WriteLine("R2 = " + eingabeR2 + " Ohm");
             //Console.WriteLine("Rges = " + GesamtwiderstandParallel + " Ohm");
             //Console.WriteLine("I = " + GesamtStromParallel + " A");
-            //Console.WriteLine("I1 = " + TeilSpannungParallel1);
-            //Console.WriteLine("I2 = " + TeilSpannungParallel2);
+            //Console.WriteLine("I1 = " + TeilStromParallel1);
+            //Console.WriteLine("I2 = " + TeilStromParallel2);
             //Console.WriteLine("Uges = " + eingabeV + " V");
             //Console.WriteLine("U1 = " + eingabeV + " V");
             //Console.WriteLine("U2 = " + eingabeV + " V");
