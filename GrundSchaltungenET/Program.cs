@@ -44,6 +44,10 @@ namespace GrundSchaltungenET
                 Console.WriteLine((i + 1) + " " + list[i] + " Ohm");
             }
 
+            for (int i = 0; i < list.Count; i++)
+            {
+                Console.WriteLine((i + 1) + " " + list[i] + " Ohm");
+            }
 
             Console.WriteLine("\nWiderstände in der Parallelschaltung:");
             for (int i = 0; i < list.Count; i++)
@@ -63,7 +67,8 @@ namespace GrundSchaltungenET
 
             Console.WriteLine("uGes = " + eingabeV + " V");
             
-
+            
+            
             double rGesReihe = 0;
             for (int i = 0; i < list.Count; i++)
             {
@@ -85,18 +90,6 @@ namespace GrundSchaltungenET
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
             string parallel = ("\nErgebnisse für die Reihenschaltung:");
             Console.WriteLine(parallel);
 
@@ -111,6 +104,16 @@ namespace GrundSchaltungenET
                 rGesParallel = rGesParallel + list[i];
             }
             Console.WriteLine("rGesParallel : " + rGesParallel + " Ohm");
+
+
+
+
+
+
+
+
+
+
 
 
 
